@@ -1,0 +1,74 @@
+{
+  "expo": {
+    "name": "DreamHub Africa",
+    "slug": "dreamhubafrica",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/logo.png",
+    "scheme": "dreamhubafrica",
+    "userInterfaceStyle": "automatic",
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.dreamhubafrica.app",
+      "buildNumber": "1.0.1",
+      "icon": "./assets/images/DreamHubAfricaAppIcon.png",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false,
+        "NSAppTransportSecurity": {
+          "NSAllowsArbitraryLoads": false,
+          "NSExceptionDomains": {
+            "api.dreamhubafrica.com": {
+              "NSIncludesSubdomains": true,
+              "NSExceptionAllowsInsecureHTTPLoads": false,
+              "NSExceptionRequiresForwardSecrecy": true
+            }
+          }
+        },
+        "NSPhotoLibraryUsageDescription": "This app requires access to your photo library to allow image uploads for listings.",
+        "NSCameraUsageDescription": "This app requires camera access to take photos for listings.",
+        "NSPhotoLibraryAddUsageDescription": "This app requires access to save images to your photo library."
+      }
+    },
+    "android": {
+      "package": "com.dreamhubafrica.app",
+      "versionCode": 1,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/DreamHubAfricaAppIcon.png",
+        "backgroundColor": "#E8B639"
+      },
+      "permissions": [
+        "INTERNET",
+        "READ_EXTERNAL_STORAGE",
+        "WRITE_EXTERNAL_STORAGE",
+        "CAMERA"
+      ],
+      "edgeToEdgeEnabled": true
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/splash-icon.png",
+          "resizeMode": "contain",
+          "backgroundColor": "#E8B639"
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "API_BASE_URL": "https://api.dreamhubafrica.com",
+      "router": {},
+      "eas": {
+        "projectId": "65dbffb3-098e-4cf6-9860-c3fdb2b849e3"
+      }
+    }
+  }
+}
